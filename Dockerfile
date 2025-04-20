@@ -2,16 +2,16 @@
 FROM node:18-alpine
 
 # Install pnpm globally (faster than npm/yarn)
-RUN npm install -g pnpm typescript
+RUN npm install -g pnpm@7 typescript
 
 # Set working directory
 WORKDIR /app
 
 # Copy package.json and pnpm-lock.yaml (or package-lock.json if using npm)
-COPY package.json pnpm-lock.yaml* ./
+COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies using pnpm (or npm if preferred)
-RUN pnpm install --frozen-lockfile  # Or `npm ci` if using npm
+RUN pnpm install
 
 # Copy the rest of the application code
 COPY . .
