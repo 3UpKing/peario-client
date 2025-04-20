@@ -1,5 +1,9 @@
 # Use an official Node.js LTS image
-FROM node:18-alpine
+FROM node:18
+
+RUN apt-get update
+ 
+RUN apt-get install -y python3 build-essential
 
 # Install pnpm globally (faster than npm/yarn)
 RUN npm install -g pnpm@7 typescript
