@@ -2,7 +2,6 @@ version: '3.8'
 services:
   peario-client:
     build: .
-    container_name: peario-client
     ports:
       - "3000:3000"
     environment:
