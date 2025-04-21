@@ -21,7 +21,7 @@ RUN pnpm install
 COPY . .
 
 # Build and minify code
-#RUN pnpm build
+RUN pnpm build
 
 # Serve minifed code in prod
 ENV NODE_ENV=production
@@ -30,4 +30,4 @@ ENV NODE_ENV=production
 EXPOSE 3000 
 
 # Start the app
-CMD ["npm", "run", "serve"]
+CMD ["npm", "run", "prod"]
