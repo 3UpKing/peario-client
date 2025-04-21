@@ -15,4 +15,4 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.pearioclient.rule=Host(`peario-client.84.8.135.166.sslip.io`)"
-      - "traefik.http.services.pearioclient.loadbalancer.server.port=8080"
+      - "traefik.http.services.pearioclient.loadbalancer.server.port=3000"
