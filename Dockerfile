@@ -21,7 +21,7 @@ RUN pnpm install
 COPY . .
 
 # Build and minify code
-RUN pnpm build
+#RUN pnpm build
 
 # Serve minifed code in prod
 ENV NODE_ENV=production
